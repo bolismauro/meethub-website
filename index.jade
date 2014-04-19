@@ -10,7 +10,7 @@ block app
     .background
     .blur 
     .page
-      .imagine
+      .imagine(data-0="opacity:1", data-200="opacity: 0; margin-left: 30px")
         h4 Imagine a place...
 
     .page.text-center
@@ -43,4 +43,5 @@ block app
 
 block scripts
   script(type='text/javascript', src='/static/js/vendor/jquery.min.js')
+  script(type='text/javascript', src='/static/js/vendor/skrollr.min.js')
   script(type='text/javascript', src='/static/js/main.js')

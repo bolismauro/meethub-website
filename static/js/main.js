@@ -15,4 +15,7 @@ $(function () {
 
   $('.imagine').delay(500).fadeIn(800);
 
+
+
+  var s = skrollr.init();
 });
