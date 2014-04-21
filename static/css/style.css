@@ -10,6 +10,7 @@ h4,h5,h6{font-weight:600}
 .spacer-60{height:60px}
 .spacer-80{height:80px}
 .spacer-100{height:100px}
+.spacer-1400{height:1400px}
 .text-left{text-align:left}
 .text-center{text-align:center}
 .text-right{text-align:right}
@@ -18,7 +19,7 @@ a.link:hover{color:#2ecc71;-webkit-box-shadow:inset 0 -2px 0 rgba(46,204,113,0.3
 .container{width:100%;height:100%;margin:auto;position:absolute;}
 .container .background{width:100%;height:100%;position:fixed;background-position:center;top:0;bottom:0;left:0;right:0;z-index:-1;background:url("../img/background.jpeg") no-repeat center center fixed;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover}
 .container .blur{width:100%;height:100%;position:fixed;background-position:center;top:0;bottom:0;left:0;right:0;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background:url("../img/background-blur.jpeg") no-repeat center center fixed;opacity:1;-ms-filter:none;filter:none;z-index:1}
-.container .page{z-index:100;width:100%;height:100%;position:relative;background:none;}
+.container .page{z-index:100;width:100%;height:900px;position:relative;background:none;}
 .container .page .imagine{padding-left:40%;padding-top:10%;display:none;}
 .container .page .imagine h4{font-size:100px;color:#fff}
 .container .page .where h3{font-size:100px;color:#fff}
