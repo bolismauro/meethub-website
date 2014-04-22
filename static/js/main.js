@@ -6,10 +6,11 @@ $(function () {
 
   $(window).scroll(function() {
     var s = $(window).scrollTop()
-      , height = $('.container').height() * 5
+      , height = 1800//$('.container').height() * 5
       , opacityVal = Math.max(0, 1 - (s / height));
 
     $('.blur').css('opacity', opacityVal);
+    console.log(opacityVal);
   });
 
 
