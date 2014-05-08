@@ -594,7 +594,7 @@ body.royal_loader { background: none!important; visibility: hidden!important; }
 /*	PARALLAX WORK QUOTE 
 /*--------------------------------*/
 #work .well{
-	background: url(../img/quote.jpg) 50% 0% fixed no-repeat;
+	background: url(../img/wall.png) 50% 0% fixed no-repeat;
 	background-position: top center;
 	-webkit-background-size: cover!important; 
     -moz-background-size: cover!important;  

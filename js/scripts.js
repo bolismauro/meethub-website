@@ -168,7 +168,7 @@ var isMobile = {
 
 <!--TICKER - add your text here -->
 
-$(".ticker").airport(["la condivisione di idee", "conoscere nuove persone", "connettere nuove persone", "imparare dagli altri"]);
+$(".ticker").airport(["la condivisione di idee", "conoscere nuove persone", "connettere persone", "imparare dagli altri"]);
 
 
   
