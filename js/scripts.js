@@ -3,7 +3,7 @@ $(document).ready(function () {
 /*****************************************************************************
 	CONTACT FORM - you can change your notification message here
 *****************************************************************************/
-   	$("#ajax-contact-form").submit(function() {
+/*   	$("#ajax-contact-form").submit(function() {
 				var str = $(this).serialize();		
 				$.ajax({
 					type: "POST",
@@ -21,7 +21,7 @@ $(document).ready(function () {
 					}
 				});
 				return false;
-			});
+			});*/
 
 //tooltip 
 $("[rel=tooltip]").tooltip();
