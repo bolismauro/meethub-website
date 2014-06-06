@@ -1,0 +1,433 @@
+//  - nib folder is located in static/css/ -
+@import('nib');
+
+//  - load fonts from google -
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import url('//fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css')
+
+//  - colors - https://kuler.adobe.com/Twitometro-color-theme-3868033/
+_notsoblack = #555
+_grey = #666
+_azure = #46ABD9
+_blue = #022C46
+_white = #fff
+
+//  - widths, heights or anything you want here -
+_width = 960px
+_padding = 10px
+
+//  - font style
+.open-sans
+  font-family 'Open Sans', sans-serif
+.raleway
+  font-family 'Raleway', sans-serif
+
+//  - reset purecss fonts -
+.pure-g [class *='pure-u'],
+.pure-g-r [class*="pure-u"]
+  @extends .open-sans
+
+.pure-form
+  input[type='text'], input[type='password'], input[type='email'], input[type='url'], input[type='date'], input[type='month'], input[type='time'], input[type='datetime'], input[type='datetime-local'], input[type='week'], input[type='number'], input[type='search'], input[type='tel'], input[type='color'], select, textarea
+    @extends .open-sans
+  button
+    @extends .open-sans
+button
+  @extends .open-sans
+
+//  - some useful classes -
+.text-left
+  text-align left
+.text-center
+  text-align center
+.text-right
+  text-align right
+
+.text-azure
+  color _azure
+.bg-azure
+  background _azure
+  color _white
+
+b,
+strong
+  font-weight 600
+
+//  - spacers -
+for _val in (1..15)
+  .spacer-{_val * 10}
+    height (_val * 10px)
+
+//  - headers -
+h1,
+h2,
+h3
+  @extends .open-sans
+  font-weight 300
+  margin 0
+h4,
+h5,
+h6
+  @extends .open-sans
+  font-weight 600
+  margin 0
+
+//  - main style -
+html,
+body
+  height 100%
+  @extends .open-sans
+
+body
+  font-weight 300
+  color _notsoblack
+  background _white
+  -webkit-overflow-scrolling touch
+  font-size 30px
+  line-height 42px
+  @extends .raleway
+
+  .container
+    width _width
+    margin 0 auto
+
+  .padding
+    padding 0 _padding
+
+  header
+    &.homepage
+      position relative
+      height 100%
+      background url('../img/header.jpg') center no-repeat
+      background-size cover
+      & > .overlay
+        width 100%
+        height 100%
+        z-index 1
+        position absolute
+        top 0
+        left 0
+        background url('../img/overlay.png')
+      & > .text
+        position relative
+        z-index 2
+        padding-top 20%
+        padding-bottom 7%
+        h1,
+        h2,
+        h4
+          margin 0
+          color _white
+          text-shadow 0 1px 1px rgba(0,0,0,0.5)
+        h1
+          font-size 100px
+          font-weight 700
+          line-height 100%
+        h2
+          text-transform uppercase
+          letter-spacing 5px
+          font-size 18px
+          font-weight 600
+        h4
+          letter-spacing 5px
+          font-size 16px
+        i
+          font-size 40px
+          color _white
+          cursor pointer
+
+    &.inner-page
+      h1
+        font-size 50px
+        font-weight 700
+        line-height 100%
+
+  #main
+    .intro
+      p
+        margin 0
+        margin-bottom 30px
+
+    .three
+      .single-one
+        font-size 18px
+        line-height 26px
+        @extends .raleway
+        .circle
+          _cwh = 120px
+          width _cwh
+          height _cwh
+          border-radius (_cwh / 2)
+          margin 0 auto
+          line-height _cwh
+          i
+            display inline-block
+            font-size (_cwh /2)
+            margin-top (_cwh / 4)
+        h3
+          color _azure
+          font-weight 600
+          font-size 24px
+          text-transform uppercase
+
+  #quote
+    padding 100px 0
+    background url('../img/wall.jpg') center no-repeat fixed
+    background-size cover
+    position relative
+    & > .overlay
+      position absolute
+      top 0
+      left 0
+      background url('../img/overlay2.png')
+      z-index 1
+      width 100%
+      height 100%
+    & > .text
+      position relative
+      color _white
+      z-index 2
+      cite
+        display block
+        font-style normal
+        font-size 32px
+        @extends .raleway
+        span
+          font-family Times, serif
+          font-weight bold
+      p.author
+        font-weight 600
+        margin 0
+        font-size 24px
+
+  #team,
+  #contacts
+    h1
+      font-size 100px
+      line-height 100%
+      margin 0
+      @extends .raleway
+      font-weight 600
+      text-transform lowercase
+
+  .team
+    .team-member
+      margin-bottom 40px
+      _teamwh = 190px
+      .circle
+        width _teamwh
+        height _teamwh
+        border-radius (_teamwh / 2)
+        overflow hidden
+        margin 0 auto
+        & > img
+          width 200px
+          height 200px
+      h4
+        @extends .raleway
+        font-weight 400
+        font-size 20px
+        line-height 24px
+        padding-bottom 5px
+        margin-bottom 5px
+        span
+          border-bottom 1px solid _azure
+          padding 0 10px 4px 10px
+      h5
+        font-weight 300
+        font-size 16px
+        line-height 20px
+      .socials
+        a
+          display inline
+          vertical-align middle
+          margin 0 10px
+          color _azure
+          i
+            font-size 20px
+
+  #contacts
+    background _azure
+    color _white
+    form
+      margin 0 auto
+      p
+        line-height 30px
+        font-size 20px
+        @extends .open-sans
+        font-weight 400
+      input,
+      button
+        font-size 20px
+        position relative
+        &:focus
+          outline none          
+      .form-inputs
+        margin 0 auto
+        width 65%
+      input
+        border none
+        background #136F8C
+        box-shadow none
+        border-top-right-radius 0
+        border-bottom-right-radius 0
+        &:valid
+          color _white
+        &:invalid
+          color #e74c3c
+        &::-webkit-input-placeholder
+          color #ccc
+        &:-moz-placeholder
+          color #ccc
+        &::-moz-placeholder
+          color #ccc
+        &:-ms-input-placeholder
+          color #ccc
+      button
+        color _white
+        background #115166
+        border none
+        border-top-right-radius 4px
+        border-bottom-right-radius 4px
+        padding .5em .6em
+        vertical-align middle
+        display inline
+        i
+          display inline-block
+          margin-right 10px
+        span
+          display inline-block
+          font-size 16px
+          text-transform uppercase
+
+  #main
+    &.inner-page
+      font-size 18px
+      font-weight 400
+      @extends .open-sans
+      
+      .sidebar
+        h5
+          position relative
+          line-height 16px
+          span
+            &.text
+              text-transform uppercase
+              font-weight 300
+              background _white
+              z-index 2
+              position relative
+              padding-right 5px
+              @extends .raleway
+            &.line
+              z-index 1
+              position absolute
+              width 100%
+              height 0
+              top 8px
+              left 0
+              border-bottom 1px solid lighten(_notsoblack, 80%)
+        ul
+          padding-left 0
+          li
+            list-style-position outside
+            list-style-type none
+            cursor pointer
+      
+      .single-course
+        padding-bottom 20px
+        border-bottom 1px solid lighten(_notsoblack, 80%)
+        h2
+          clearfix()
+          & > span
+            display inline-block
+            &.title
+              text-transform uppercase
+              margin-right 10px
+              float left
+              line-height 28px
+            &.infos
+              font-size 14px
+              font-weight 400
+              float right
+              line-height 20px
+        p
+          font-weight 400
+          line-height 180%
+
+  footer
+    background _notsoblack
+    color _white
+    @extends .open-sans
+    font-size 14px
+    line-height 150%
+    font-weight 400
+    .left
+      span
+        text-transform uppercase
+        display inline
+        margin-right 20px
+        @extends .raleway
+      a
+        color _white
+    .right
+      .iubenda-embed
+        display inline-block
+
+
+//  - media queries - http://purecss.io/grids/ > Default Media Queries
+@media screen and (max-width: 1023px)
+  _width = 100%
+  _padding = 20px
+
+  body
+    .container
+      width _width
+    
+    .padding
+      padding 0 _padding
+
+    header
+      &.homepage
+        height 90%
+        max-height 450px
+        & > .text
+          h1
+            font-size 60px
+          h2,
+          h4
+            font-size 14px
+            line-height 30px
+
+    #main
+      .three
+        .single-one
+          margin-bottom 30px
+          &:last-child
+            margin-bottom 0
+
+    #team,
+    #contacts
+      h1
+        font-size 55px
+
+    #contacts
+      background _azure
+      color _white
+      form
+        @extends .text-center
+        input
+          border-radius 4px
+          border-bottom-left-radius 0
+          border-bottom-right-radius 0
+          margin-bottom 0
+          text-align center
+        button
+          margin-top -1px
+          color _white
+          background #115166
+          border none
+          border-radius 4px
+          border-top-left-radius 0
+          border-top-right-radius 0

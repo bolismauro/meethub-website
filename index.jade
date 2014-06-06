@@ -1,0 +1,173 @@
+extends base/layout
+
+
+block otherhead
+
+
+
+block content
+
+  header.homepage
+    .overlay
+    .text
+
+      .text-center
+
+        h4 Milano, autunno 2014
+        .spacer-20
+        h1.raleway MeetHub
+        .spacer-20
+        h2 Meet, Share, Build. Change.
+        .spacer-20
+        i.fa.fa-sort-down#scroll-to-main.link-scroll(data-where-to='main')
+
+
+
+  #main
+    .container
+
+      .spacer-50
+
+      .intro
+        .padding
+          p
+            span.text-azure
+              | Un luogo 
+            | stimolante in cui 
+            span.text-azure accelerare 
+            | sé stessi e rimodellare ogni giorno 
+            span.text-azure la propria realtà.
+          p
+            b.text-azure
+              | MeetHub 
+            | #appYourself.
+
+      .spacer-50
+
+      .three.pure-g
+
+        .pure-u-lg-1-3.pure-u-1.single-one
+          .padding
+            .text-center
+              .circle.bg-azure
+                i.fa.fa-flask
+              .spacer-30
+              h3
+                | Teamwork
+              p
+                | Lavora in team di persone con <b>background eterogenei</b> su problemi di aziende.
+                br
+                | Esplora soluzioni innovative e mettiti in mostra!
+
+        .pure-u-lg-1-3.pure-u-1.single-one
+          .padding
+            .text-center
+              .circle.bg-azure
+                i.fa.fa-code
+              .spacer-30
+              h3
+                | Formazione digital focused
+              p
+                | Corsi <b>entry-level</b> per capirci qualcosa quando parlate con uno sviluppatore figo.
+                br
+                | Corsi <b>avanzati</b> per approfondire le tue conoscenze e metterle in pratica.
+
+        .pure-u-lg-1-3.pure-u-1.single-one
+          .padding
+            .text-center
+              .circle.bg-azure
+                i.fa.fa-users
+              .spacer-30
+              h3
+                | Shared startup cafe
+              p
+                | Il <b>punto di riferimento</b> per le persone che amano <b>incontrarsi</b>, condividere <b>idee</b>, ampliare il proprio <b>network</b> e farsi litri di <b>caff&egrave;</b>.
+          
+
+      .spacer-50
+
+
+  #quote
+    .overlay
+    .text
+      .container
+        .padding.text-center
+          cite 
+            span &laquo; 
+            | There's only one thing that all the successful companies in the world have in common: <b>none was started by one person</b>. 
+            span &raquo;
+          .spacer-30
+          p.author.text-right
+            | Ernesto Sirolli
+
+
+  #team
+    .container
+
+      .spacer-50
+
+      .padding
+        h1
+          | Team
+        p
+          | Siamo sette ragazzi che credono fortemente nella condivisione, nel gioco di squadra e nella connessione tra persone.
+
+      .team.pure-g
+
+        - var team = [{'nome': 'Andrea Speziale', 'job': 'Communication & Guru', 'pic': 'andrea.jpg', 'fb': 'http://fb.com/andreafspeziale', 'tw': 'http://twitter.com/andreafspeziale', 'li': 'http://linkedin.com/profile/view?id=208022342'},{'nome': 'Mauro Bolis', 'job': 'Training & Deadline Master', 'pic': 'mauro.jpg', 'fb': 'http://fb.com/bolismauro', 'tw': 'http://twitter.com/maurobolis', 'li': 'http://linkedin.com/profile/view?id=156968743'},{'nome': 'Marta Bisisi', 'job': 'Financial', 'pic': 'marta.jpg', 'fb': 'http://fb.com/marta.bisisi', 'tw': 'http://twitter.com/MartaBisisi', 'li': 'http://linkedin.com/profile/view?id=308388367'},{'nome': 'Simone Lusenti', 'job': 'Account & Thinker', 'pic': 'simone.jpg', 'fb': 'http://fb.com/slusenti', 'tw': 'http://twitter.com/Lanzone31', 'li': 'http://linkedin.com/profile/view?id=39084654'},{'nome': 'Salvatore Scarfò', 'job': 'Marketing & Financial', 'pic': 'salvo.jpg', 'fb': 'http://fb.com/scarfo.s', 'tw': 'http://twitter.com/Scarfo_S', 'li': 'http://linkedin.com/salvatorescarfo'},{'nome': 'Emanuele Brivio', 'job': 'User Interface & Experience Master', 'pic': 'emanuele.jpg', 'fb': 'http://fb.com/emanbrivio', 'tw': 'http://twitter.com/emanbrivio', 'li': 'http://linkedin.com/in/emanuelebrivio'},{'nome': 'Alessio Zappa', 'job': 'Media Designer Senior', 'pic': 'alessio.jpg', 'fb': 'http://fb.com', 'tw': 'http://twitter.com', 'li': 'http://linkedin.com/in/alessioedoardozappa'}];
+
+        - for m, k in team
+          if k === 4
+            .pure-u-md-1-8.pure-u-1.fix
+
+          .pure-u-md-1-4.pure-u-1.team-member
+            .padding
+              .text-center
+                .circle
+                  img(src='static/img/team/#{m.pic}', alt='#{m.nome}')
+                .spacer-20
+                h4 
+                  span #{m.nome}
+                h5 #{m.job}
+                .socials.text-center
+                  a(href='#{m.fb}', target='_blank')
+                    i.fa.fa-facebook
+                  a(href='#{m.tw}', target='_blank')
+                    i.fa.fa-twitter
+                  a(href='#{m.li}', target='_blank')
+                    i.fa.fa-linkedin
+
+      .spacer-50
+
+
+  #contacts
+    .container
+
+      .spacer-50
+
+      .padding
+        h1
+          | Contattaci
+        p
+          | Vogliamo aiutare le nuove generazioni a <b>migliorare</b> il posto in cui viviamo.
+          br
+          | Vogliamo aiutare le aziende a trovare <b>soluzioni innovative</b> ai loro problemi.
+          br
+          | Perch&eacute; il mondo del lavoro deve diventare un modo di crescere, <b>tutti insieme</b>.
+
+        form.validate.pure-form.validate(action='http://meethub.us8.list-manage2.com/subscribe/post?u=979a6993e64ffa1ec057b0823&amp;id=a116ce73c0', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate)
+          p
+            | Lasciaci un tuo contatto e unisciti al nostro viaggio.
+            br
+            | Possiamo parlare di tutto questo e molto altro davanti ad un caffè!
+          .pure-g.form-inputs
+            .pure-u-lg-3-4.pure-u-1
+              input#mce-EMAIL.pure-input-1(type='email', value='', name='EMAIL', placeholder='Il tuo indirizzo email', required)
+            .pure-u-lg-1-4.pure-u-1
+              button.pure-input-1(type='submit')
+                i.fa.fa-check
+                span Conferma
+
+      .spacer-50
+
+block scripts
