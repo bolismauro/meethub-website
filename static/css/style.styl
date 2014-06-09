@@ -16,6 +16,7 @@ _white = #fff
 //  - widths, heights or anything you want here -
 _width = 960px
 _padding = 10px
+_footer = 140px
 
 //  - font style
 .open-sans
@@ -88,6 +89,17 @@ body
   line-height 42px
   @extends .raleway
 
+  .body
+    min-height 100%
+    height auto!important
+    height 100%
+    margin 0 auto -(_footer) auto
+    position relative
+
+  .fix
+    height _footer
+    clearfix()
+
   .container
     width _width
     margin 0 auto
@@ -98,7 +110,7 @@ body
   header
     &.homepage
       position relative
-      height 100%
+      height 100%!important
       background url('../img/header.jpg') center no-repeat
       background-size cover
       & > .overlay
@@ -170,10 +182,11 @@ body
           font-weight 600
           font-size 24px
           text-transform uppercase
-
-        a
-          text-decoration none
-          color _azure
+        b
+          &.link-scroll
+            text-decoration none
+            color _azure
+            cursor pointer
   #quote
     padding 100px 0
     background url('../img/wall.jpg') center no-repeat fixed
@@ -337,12 +350,18 @@ body
             list-style-position outside
             list-style-type none
             cursor pointer
+            font-size 14px
+            line-height 20px
+            padding 0 10px
+            @extends .raleway
+            color _azure
       
       .single-course
         padding-bottom 20px
         border-bottom 1px solid lighten(_notsoblack, 80%)
         h2
           clearfix()
+          margin-bottom 20px
           & > span
             display inline-block
             &.title
@@ -355,9 +374,37 @@ body
               font-weight 400
               float right
               line-height 20px
-        p
+        div
           font-weight 400
-          line-height 180%
+          line-height 160%
+          font-size 16px
+          &.more
+            height 0
+            transition height 0.5s ease
+            overflow hidden
+            .text
+              @extends .raleway
+              h4
+                text-transform none
+                color _azure
+                font-size 16px
+                margin-top 20px
+              ul
+                margin 0
+                padding 0
+                li
+                  list-style-type circle
+                  list-style-position inside
+                  padding-left 10px    
+          p
+            &.read-more
+              cursor pointer
+              color _azure
+              text-transform uppercase
+              font-style italic
+              font-size 14px
+        h4
+          text-transform uppercase
 
   footer
     background _notsoblack
@@ -366,6 +413,8 @@ body
     font-size 14px
     line-height 150%
     font-weight 400
+    height _footer
+    overflow hidden
     a
       color _white
     .left
@@ -393,6 +442,11 @@ body
   _padding = 20px
 
   body
+    
+    .body
+      height 100%!important
+      height auto!important
+
     .container
       width _width
     
@@ -448,6 +502,8 @@ body
           width 85%
 
     footer
+      height auto!important
+      overflow visible
       .right
         margin-top 20px
         b
