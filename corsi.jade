@@ -25,28 +25,68 @@ block content
                 | i nostri corsi
               span.line
             ul
-              - for (var i = 0; i < 2; i++)
-                li.link-scroll(data-where-to='course-#{i}')
-                  | corso #{i}
+              li.link-scroll(data-where-to='course-#1')
+                | App mobile: cosa sono e quando serve utilizzarne una
 
         .pure-u-lg-3-4.pure-u-1
+          .single-course(id='course-#1')
+            .padding
+              h2
+                span.title.text-azure
+                  | App mobile: cosa sono e quando serve utilizzarne una
+                span.infos 
+                  | 3 lezioni
+                  span.text-azure  // 
+                  | 300,00&euro;
+              div
+                | Praesent volutpat eget dui et euismod. Sed hendrerit sed nulla vel scelerisque. Proin purus arcu, rhoncus nec sodales elementum, porttitor sit amet lorem. Nunc posuere porta porttitor. Aenean facilisis, nisi nec tempus pellentesque, ipsum erat interdum lectus, a pharetra justo metus non tellus. Donec commodo libero id tincidunt venenatis. Suspendisse consequat tempus urna eget bibendum. Maecenas in dignissim nulla, nec auctor sem. Donec fermentum sem sit amet vulputate scelerisque. Donec commodo, dui eget commodo sagittis, mi felis suscipit orci, at vehicula turpis dui et tortor. Cras fermentum lectus in ligula suscipit ornare. Ut eget lacinia velit. Nam mattis massa malesuada vehicula tempor
+                .more
+                  .text
+                    .spacer-20
+                    :markdown
 
-          - for (var i = 0; i < 2; i++)
-            .single-course(id='course-#{i}')
-              .padding
-                h2
-                  span.title.text-azure course title abbastanza lungo
-                  span.infos 
-                    | beginner
-                    span.text-azure  // 
-                    | 4 lessons
-                    span.text-azure  // 
-                    | marketing, web
-                p
-                  :markdown
-                    Praesent volutpat eget dui et euismod. Sed hendrerit sed nulla vel scelerisque. Proin purus arcu, rhoncus nec sodales elementum, porttitor sit amet lorem. Nunc posuere porta porttitor. Aenean facilisis, nisi nec tempus pellentesque, ipsum erat interdum lectus, a pharetra justo metus non tellus. Donec commodo libero id tincidunt venenatis. Suspendisse consequat tempus urna eget bibendum. Maecenas in dignissim nulla, nec auctor sem. Donec fermentum sem sit amet vulputate scelerisque. Donec commodo, dui eget commodo sagittis, mi felis suscipit orci, at vehicula turpis dui et tortor. Cras fermentum lectus in ligula suscipit ornare. Ut eget lacinia velit. Nam mattis massa malesuada vehicula tempor.
+                      ###PROGRAMMA DEL CORSO###
 
-            .spacer-60
+                      ####Introduzione####
+                      - Obiettivi del corso
+                      - Qualche numero del mercato
+
+                      ####Cosa è una app?####
+                      - Storia
+                      - Caratteristiche principali
+                      - Perché sono fighe
+                      - Perché si sono diffuse
+
+                      ####Quando ha senso usarla - use cases####
+                      - Qualche caso “positivo”
+                      - Qualche caso “fallimentare”
+                      - La strategia che deve accompagnare un’app (non farle a caso…)
+
+                      ####Differenza tra nativa e web-based####
+
+                      ####Piattaforme (Android/iOS/Windows) differenze e da dove conviene partire (3 lezione)####
+
+
+                      ####Spiegazione interna####
+                      Il corso ha lo scopo di:
+                      - introdurre persone non tecniche al mondo delle app
+                      - spiegare le caratteristiche principali di questa tipologia di applicazione
+                      - dare strumenti per valutare quali tra le possibilità che la tecnologia ci offre conviene usare nei diversi contesti
+
+
+                    .spacer-20
+
+                p.read-more.text-right leggi il programma
+
+              h4
+                | Iscriviti
+              form.pure-form(action='', method='POST')
+                fieldset
+                  input(type='email', placeholder='Il tuo indirizzo e-mail', required)
+                  button.pure-button.pure-button-primary(type='submit')
+                    span Iscriviti
+
+          .spacer-60
 
 
 
