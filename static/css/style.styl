@@ -108,7 +108,7 @@ body
         position absolute
         top 0
         left 0
-        background url('../img/overlay.png')
+        background url('../img/overlay2.png')
       & > .text
         position relative
         z-index 2
@@ -363,15 +363,23 @@ body
     font-size 14px
     line-height 150%
     font-weight 400
+    a
+      color _white
     .left
-      span
-        text-transform uppercase
-        display inline
-        margin-right 20px
-        @extends .raleway
       a
-        color _white
+        font-weight 700
+        text-decoration none
+        border-bottom 1px dotted _white
+      small
+        display block
+        font-size 12px
+        line-height 16px
+        margin-top 10px
     .right
+      b
+        font-size 16px
+      a
+        text-decoration none
       .iubenda-embed
         display inline-block
 
@@ -422,11 +430,24 @@ body
           border-bottom-right-radius 0
           margin-bottom 0
           text-align center
+          font-size 16px
         button
-          margin-top -1px
+          margin-top -10px
           color _white
           background #115166
           border none
           border-radius 4px
           border-top-left-radius 0
           border-top-right-radius 0
+          font-size 16px
+        .form-inputs
+          margin 0 auto
+          width 85%
+
+    footer
+      .right
+        margin-top 20px
+        b
+          display block
+        .spacer-20
+          height 10px

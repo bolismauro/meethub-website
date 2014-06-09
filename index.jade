@@ -17,7 +17,7 @@ block content
         .spacer-20
         h1.raleway MeetHub
         .spacer-20
-        h2 Meet, Share, Build. Change.
+        h2 Meet, Share, Build: Change.
         .spacer-20
         i.fa.fa-sort-down#scroll-to-main.link-scroll(data-where-to='main')
 
@@ -31,18 +31,20 @@ block content
       .intro
         .padding
           p
+            b Meethub 
+            | &egrave; 
             span.text-azure
-              | Un luogo 
+              | un luogo 
             | stimolante in cui 
             span.text-azure accelerare 
             | sé stessi e rimodellare ogni giorno 
             span.text-azure la propria realtà.
-          p
+          p.text-center
             b.text-azure
               | MeetHub 
             | #appYourself.
 
-      .spacer-50
+      .spacer-20
 
       .three.pure-g
 
@@ -68,7 +70,7 @@ block content
               h3
                 | Formazione digital focused
               p
-                | Corsi <b>entry-level</b> per capirci qualcosa quando parlate con uno sviluppatore figo.
+                | Corsi <b>entry-level</b> per capirci qualcosa quando parlate con uno sviluppatore professionista.
                 br
                 | Corsi <b>avanzati</b> per approfondire le tue conoscenze e metterle in pratica.
 
@@ -81,7 +83,7 @@ block content
               h3
                 | Shared startup cafe
               p
-                | Il <b>punto di riferimento</b> per le persone che amano <b>incontrarsi</b>, condividere <b>idee</b>, ampliare il proprio <b>network</b> e farsi litri di <b>caff&egrave;</b>.
+                | Il <b>punto di riferimento</b> per le persone che amano <b>incontrarsi</b>, condividere <b>idee</b>, ampliare il proprio <b>network</b> e bere <b>caff&egrave;</b>.
           
 
       .spacer-50
@@ -114,7 +116,7 @@ block content
 
       .team.pure-g
 
-        - var team = [{'nome': 'Andrea Speziale', 'job': 'Communication & Guru', 'pic': 'andrea.jpg', 'fb': 'http://fb.com/andreafspeziale', 'tw': 'http://twitter.com/andreafspeziale', 'li': 'http://linkedin.com/profile/view?id=208022342'},{'nome': 'Mauro Bolis', 'job': 'Training & Deadline Master', 'pic': 'mauro.jpg', 'fb': 'http://fb.com/bolismauro', 'tw': 'http://twitter.com/maurobolis', 'li': 'http://linkedin.com/profile/view?id=156968743'},{'nome': 'Marta Bisisi', 'job': 'Financial', 'pic': 'marta.jpg', 'fb': 'http://fb.com/marta.bisisi', 'tw': 'http://twitter.com/MartaBisisi', 'li': 'http://linkedin.com/profile/view?id=308388367'},{'nome': 'Simone Lusenti', 'job': 'Account & Thinker', 'pic': 'simone.jpg', 'fb': 'http://fb.com/slusenti', 'tw': 'http://twitter.com/Lanzone31', 'li': 'http://linkedin.com/profile/view?id=39084654'},{'nome': 'Salvatore Scarfò', 'job': 'Marketing & Financial', 'pic': 'salvo.jpg', 'fb': 'http://fb.com/scarfo.s', 'tw': 'http://twitter.com/Scarfo_S', 'li': 'http://linkedin.com/salvatorescarfo'},{'nome': 'Emanuele Brivio', 'job': 'User Interface & Experience Master', 'pic': 'emanuele.jpg', 'fb': 'http://fb.com/emanbrivio', 'tw': 'http://twitter.com/emanbrivio', 'li': 'http://linkedin.com/in/emanuelebrivio'},{'nome': 'Alessio Zappa', 'job': 'Media Designer Senior', 'pic': 'alessio.jpg', 'fb': 'http://fb.com', 'tw': 'http://twitter.com', 'li': 'http://linkedin.com/in/alessioedoardozappa'}];
+        - var team = [{'nome': 'Andrea Speziale', 'job': 'Communication & Guru', 'pic': 'andrea.jpg', 'fb': 'http://fb.com/andreafspeziale', 'tw': 'http://twitter.com/andreafspeziale', 'li': 'http://linkedin.com/profile/view?id=208022342'},{'nome': 'Mauro Bolis', 'job': 'Training & Deadline Master', 'pic': 'mauro.jpg', 'fb': 'http://fb.com/bolismauro', 'tw': 'http://twitter.com/maurobolis', 'li': 'http://linkedin.com/profile/view?id=156968743'},{'nome': 'Marta Bisisi', 'job': 'Financial', 'pic': 'marta.jpg', 'fb': 'http://fb.com/marta.bisisi', 'tw': 'http://twitter.com/MartaBisisi', 'li': 'http://linkedin.com/profile/view?id=308388367'},{'nome': 'Simone Lusenti', 'job': 'Account & Thinker', 'pic': 'simone.jpg', 'fb': 'http://fb.com/slusenti', 'tw': 'http://twitter.com/Lanzone31', 'li': 'http://linkedin.com/profile/view?id=39084654'},{'nome': 'Salvatore Scarfò', 'job': 'Marketing & Financial', 'pic': 'salvo.jpg', 'fb': 'http://fb.com/scarfo.s', 'tw': 'http://twitter.com/Scarfo_S', 'li': 'http://linkedin.com/salvatorescarfo'},{'nome': 'Emanuele Brivio', 'job': 'User Interface & Experience Master', 'pic': 'emanuele.jpg', 'fb': 'http://fb.com/emanbrivio', 'tw': 'http://twitter.com/emanbrivio', 'li': 'http://linkedin.com/in/emanuelebrivio'},{'nome': 'Alessio Zappa', 'job': 'Senior Media Designer', 'pic': 'alessio.jpg', 'fb': 'http://fb.com', 'tw': 'http://twitter.com', 'li': 'http://linkedin.com/in/alessioedoardozappa'}];
 
         - for m, k in team
           if k === 4
@@ -159,14 +161,14 @@ block content
           p
             | Lasciaci un tuo contatto e unisciti al nostro viaggio.
             br
-            | Possiamo parlare di tutto questo e molto altro davanti ad un caffè!
+            | Pretty cool uh? Parliamone davanti ad un caff&egrave;!
           .pure-g.form-inputs
-            .pure-u-lg-3-4.pure-u-1
-              input#mce-EMAIL.pure-input-1(type='email', value='', name='EMAIL', placeholder='Il tuo indirizzo email', required)
-            .pure-u-lg-1-4.pure-u-1
+            .pure-u-lg-1-2.pure-u-1
+              input#mce-EMAIL.pure-input-1(type='email', value='', name='EMAIL', placeholder='Inserisci il tuo indirizzo email', required)
+            .pure-u-lg-1-2.pure-u-1
               button.pure-input-1(type='submit')
                 i.fa.fa-check
-                span Conferma
+                span Resta aggiornato
 
       .spacer-50
 
