@@ -30,7 +30,11 @@ block content
 
       .intro
         .padding
-          p
+          h1.text-center
+            span
+              | about
+          .spacer-40
+          p.text-center
             b Meethub 
             | &egrave; 
             span.text-azure
@@ -39,10 +43,6 @@ block content
             span.text-azure accelerare 
             | se stessi e rimodellare ogni giorno 
             span.text-azure la propria realtà.
-          p.text-center
-            b.text-azure
-              | MeetHub 
-            | #AppYourself
 
       .spacer-20
 
@@ -57,11 +57,9 @@ block content
               h3
                 | teamwork
               p
-                | Dimostra le tue capacità risolvendo in modo <b>innovativo</b> problemi di aziende partner
-                <!-- Mettiti in gioco risolvendo in modo innovativo i problemi delle nostre aziende partner --> 
+                | Mettiti in gioco risolvendo in modo <b>innovativo</b> i problemi delle nostre aziende partner
                 br
-                | Esplora soluzioni innovative e mettiti in mostra!
-              br
+                span.text-azure #appyourself
               b.link-scroll(data-where-to='mailchimp')
                 | Candidati!
 
@@ -74,12 +72,9 @@ block content
               h3
                 | Digital training
               p
-                | Corsi <b>entry-level</b> per capirci qualcosa quando parlate con uno sviluppatore professionista.
-                <!-- <b>Short<b> per capirci qualcosa quando parlate con uno sviluppatore figo -->
+                | <b>Brevi</b> per capirci qualcosa quando parlate con un sviluppatore
                 br
-                | Corsi <b>avanzati</b> per approfondire le tue conoscenze e metterle in pratica
-                <!-- <b>Intensive<b> per trasformare le tue conoscenze in superpoteri e metterli in pratica -->
-              
+                | <b>Avanzati</b> per affinare le tue conoscenze e metterle in pratica
               b.link-scroll(data-where-to='mailchimp')
                 | Iscriviti ai corsi!
 
@@ -93,9 +88,6 @@ block content
                 | Shared startup cafe
               p
                 | Il punto di riferimento per persone che amano <b>incontrarsi</b>, <b>condividere</b> idee, <b>scambiare</b> competenze, e bere litri di caffè!
-
-              br
-              br
               b.link-scroll(data-where-to='mailchimp')
                 | Resta in contatto!          
 
@@ -122,24 +114,26 @@ block content
       .spacer-50
 
       .padding
-        h1
-          | Team
-        p
+        h1.text-center
+          span
+            | Team
+        p.text-center
           | Siamo dei ragazzi che credono fortemente nella <b>condivisione</b>, nel <b>gioco di squadra</b> e nella connessione tra persone.
 
       .team.pure-g
 
-        - var team = [{'nome': 'Andrea Speziale', 'job': 'Communication & Guru', 'pic': 'andrea.jpg', 'fb': 'http://fb.com/andreafspeziale', 'tw': 'http://twitter.com/andreafspeziale', 'li': 'http://linkedin.com/profile/view?id=208022342'},{'nome': 'Mauro Bolis', 'job': 'Training & Deadline Master', 'pic': 'mauro.jpg', 'fb': 'http://fb.com/bolismauro', 'tw': 'http://twitter.com/maurobolis', 'li': 'http://linkedin.com/profile/view?id=156968743'},{'nome': 'Marta Bisisi', 'job': 'Financial', 'pic': 'marta.jpg', 'fb': 'http://fb.com/marta.bisisi', 'tw': 'http://twitter.com/MartaBisisi', 'li': 'http://linkedin.com/profile/view?id=308388367'},{'nome': 'Simone Lusenti', 'job': 'Account & Thinker', 'pic': 'simone.jpg', 'fb': 'http://fb.com/slusenti', 'tw': 'http://twitter.com/Lanzone31', 'li': 'http://linkedin.com/profile/view?id=39084654'},{'nome': 'Salvatore Scarfò', 'job': 'Marketing & Financial', 'pic': 'salvo.jpg', 'fb': 'http://fb.com/scarfo.s', 'tw': 'http://twitter.com/Scarfo_S', 'li': 'https://www.linkedin.com/profile/view?id=206525071'},{'nome': 'Emanuele Brivio', 'job': 'User Interface & Experience Master', 'pic': 'emanuele.jpg', 'fb': 'http://fb.com/emanbrivio', 'tw': 'http://twitter.com/emanbrivio', 'li': 'http://linkedin.com/in/emanuelebrivio'},{'nome': 'Alessio Zappa', 'job': 'Senior Media Designer', 'pic': 'alessio.jpg', 'fb': 'http://fb.com', 'tw': 'http://twitter.com', 'li': 'http://linkedin.com/in/alessioedoardozappa'}];
+        - var team = [{'nome': 'Andrea Speziale', 'job': 'Communication & Guru', 'pic': 'andrea', 'fb': 'http://fb.com/andreafspeziale', 'tw': 'http://twitter.com/andreafspeziale', 'li': 'http://linkedin.com/profile/view?id=208022342'},{'nome': 'Mauro Bolis', 'job': 'Training & Deadline Master', 'pic': 'mauro', 'fb': 'http://fb.com/bolismauro', 'tw': 'http://twitter.com/maurobolis', 'li': 'http://linkedin.com/profile/view?id=156968743'},{'nome': 'Simone Lusenti', 'job': 'Account & Thinker', 'pic': 'simone', 'fb': 'http://fb.com/slusenti', 'tw': 'http://twitter.com/Lanzone31', 'li': 'http://linkedin.com/profile/view?id=39084654'},{'nome': 'Marta Bisisi', 'job': 'Financial', 'pic': 'marta', 'fb': 'http://fb.com/marta.bisisi', 'tw': 'http://twitter.com/MartaBisisi', 'li': 'http://linkedin.com/profile/view?id=308388367'},{'nome': 'Salvatore Scarfò', 'job': 'Marketing & Financial', 'pic': 'salvo', 'fb': 'http://fb.com/scarfo.s', 'tw': 'http://twitter.com/Scarfo_S', 'li': 'https://www.linkedin.com/profile/view?id=206525071'},{'nome': 'Emanuele Brivio', 'job': 'User Interface & Experience Master', 'pic': 'emanuele', 'fb': 'http://fb.com/emanbrivio', 'tw': 'http://twitter.com/emanbrivio', 'li': 'http://linkedin.com/in/emanuelebrivio'},{'nome': 'Alessio Zappa', 'job': 'Senior Media Designer', 'pic': 'alessio', 'fb': 'http://fb.com', 'tw': 'http://twitter.com', 'li': 'http://linkedin.com/in/alessioedoardozappa'}];
 
         - for m, k in team
-          if k === 4
+          if k === 0
             .pure-u-md-1-8.pure-u-1.fix
 
           .pure-u-md-1-4.pure-u-1.team-member
             .padding
               .text-center
                 .circle
-                  img(src='static/img/team/#{m.pic}', alt='#{m.nome}')
+                  img(src='static/img/team/#{m.pic}.jpg', alt='#{m.nome}')
+                  .hover-circle(style="background-image:url('static/img/team/#{m.pic}_hover.jpg')")
                 .spacer-20
                 h4 
                   span #{m.nome}
@@ -161,20 +155,17 @@ block content
       .spacer-50
 
       .padding
-        h1
-          | Contattaci
-        p
-          | Vogliamo aiutare le nuove generazioni a <b>migliorare</b> il posto in cui viviamo.
-          br
-          | Vogliamo aiutare le aziende a trovare <b>soluzioni innovative</b> ai loro problemi.
-          br
-          | Perch&eacute; il mondo del lavoro deve diventare un modo di crescere, <b>tutti insieme</b>.
+        h1.text-center
+          span
+            | keep in touch
+        p.text-center
+          | Vogliamo aiutare le nuove generazioni a <b>migliorare</b> il posto in cui viviamo e aiutare le aziende ad <b>innovarsi</b>.
 
         form#mailchimp.validate.pure-form.validate(action='http://meethub.us8.list-manage2.com/subscribe/post?u=979a6993e64ffa1ec057b0823&amp;id=a116ce73c0', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate)
           p
             | Lasciaci un tuo contatto e unisciti al nostro viaggio.
             br
-            | Pretty cool uh? Parliamone davanti ad un caff&egrave;!
+            | Parliamone davanti ad un caff&egrave;!
           .pure-g.form-inputs
             .pure-u-lg-1-2.pure-u-1
               input#mce-EMAIL.pure-input-1(type='email', value='', name='EMAIL', placeholder='Inserisci il tuo indirizzo email', required)
