@@ -110,7 +110,7 @@ body
   header
     &.homepage
       position relative
-      height 100%!important
+      //height 100%!important
       background url('../img/header.jpg') center no-repeat
       background-size cover
       & > .overlay
@@ -124,7 +124,7 @@ body
       & > .text
         position relative
         z-index 2
-        padding-top 20%
+        padding-top 5%
         padding-bottom 7%
         h1,
         h2,
@@ -148,12 +148,25 @@ body
           font-size 40px
           color _white
           cursor pointer
+        img.logo
+          width 300px
+          height 300px
 
     &.inner-page
       h1
-        font-size 50px
+        font-size 32px
         font-weight 700
         line-height 100%
+        a
+          color _notsoblack
+          text-decoration none
+          span,
+          img
+            display inline-block
+          img
+            width 64px
+            height 64px
+            vertical-align bottom
 
   #main
     .intro
@@ -182,11 +195,14 @@ body
           font-weight 600
           font-size 24px
           text-transform uppercase
-        b
-          &.link-scroll
-            text-decoration none
-            color _azure
-            cursor pointer
+        b.link-scroll,
+        a
+          text-decoration none
+          color _azure
+          cursor pointer
+          font-weight 600
+          border-bottom 2px solid rgba(_azure, 60%)
+
   #quote
     padding 100px 0
     background url('../img/wall.jpg') center no-repeat fixed
@@ -228,7 +244,7 @@ body
       font-weight 600
       text-transform lowercase
       span
-        border-bottom 1px solid _notsoblack
+        border-bottom 1px solid rgba(_notsoblack, 50%)
   #contacts
     h1
       span
@@ -390,16 +406,24 @@ body
             cursor pointer
             font-size 14px
             line-height 20px
-            padding 0 10px
+            padding 0
             @extends .raleway
             color _azure
       
       .single-course
         padding-bottom 20px
         border-bottom 1px solid lighten(_notsoblack, 80%)
+        .padding
+          padding-left 30px
+        &:last-child
+          border-bottom none
         h2
           clearfix()
           margin-bottom 20px
+          &.grey
+            text-transform uppercase
+            text-align center
+            color _azure
           & > span
             display inline-block
             &.title
@@ -408,10 +432,17 @@ body
               float left
               line-height 28px
             &.infos
-              font-size 14px
+              font-size 13px
               font-weight 400
               float right
-              line-height 20px
+              line-height 24px
+        p
+          &.next
+            @extends .raleway
+            a
+              color _notsoblack
+              text-decoration none
+              border-bottom 2px solid rgba(_notsoblack, 20%)
         form
           input
             box-shadow none
@@ -448,13 +479,36 @@ body
                 border-bottom 2px solid rgba(_notsoblack, 0.2)
                 display inline-block
                 color rgba(_notsoblack, 0.6)
-          p
-            &.read-more
-              cursor pointer
-              color _azure
-              text-transform uppercase
-              font-style italic
-              font-size 14px
+              .trainer-list
+                ul
+                  margin 1em 0
+                  li
+                    display inline-block
+                    text-align center
+                    margin-right 10px
+                    padding-left 0
+                    text-transform uppercase
+                    font-size 13px
+                    max-width 150px
+                    @extends .open-sans
+                    color lighten(_notsoblack, 40%)
+                    span.pic
+                      _wPic = 100px
+                      width _wPic
+                      height _wPic
+                      border-radius (_wPic / 2)
+                      overflow hidden
+                      display block
+                      margin 0 auto 5px auto
+                      & > img
+                        width _wPic
+                        height _wPic
+          span.read-more
+            cursor pointer
+            color _azure
+            text-transform uppercase
+            font-style italic
+            font-size 14px
         h4
           text-transform uppercase
 
@@ -515,6 +569,9 @@ body
           h4
             font-size 14px
             line-height 30px
+          img.logo
+            width 150px
+            height 150px
 
     #main
       .three
@@ -522,6 +579,12 @@ body
           margin-bottom 30px
           &:last-child
             margin-bottom 0
+      &.inner-page
+        .sidebar
+          margin-bottom 100px
+        .single-course
+          .padding
+            padding-left 20px
 
     .intro
     #team,

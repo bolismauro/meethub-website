@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function () {
   //  read more link
   function readMore (target) {
     var _h = 0;
-    var _el = target.previousSibling;
+    var _el = target.parentNode.previousSibling;
 
     if (_el.classList.contains('show')) {
       _h = 0;
@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', function () {
     _el.style.height = _h + 'px';
   }
 
-  document.querySelectorAll('.single-course p.read-more').forEach(function (el) {
+  document.querySelectorAll('.single-course span.read-more').forEach(function (el) {
     el.addEventListener('click', function (e) {
       e.preventDefault();
       readMore(e.target);

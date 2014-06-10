@@ -11,7 +11,11 @@ block content
     .container
       .padding
         .spacer-20
-        h1.raleway MeetHub
+        h1.raleway
+          a(href='/') 
+            img(src='static/img/mh-logo.png', alt='MeetHub')
+            span
+              | MeetHub
         .spacer-100
       
   #main.inner-page
@@ -90,16 +94,30 @@ block content
 
                       <div class="spacer-20"></div>
 
-                      ###TRAINER###
-                      Andrea Speziale, Mauro Bolis, Alessandro Zocca
+                    h3
+                      | TRAINER
+                    .trainer-list
+                      ul
+                        li
+                          span.pic
+                            img(src='static/img/team/andrea.jpg')
+                          | Andrea Speziale
+                        li
+                          span.pic
+                            img(src='static/img/team/mauro.jpg')
+                          | Mauro Bolis
+                        //-li
+                          | Alessandro Zocca
 
 
 
 
-                p.read-more.text-right leggi il programma
+                p.text-right 
+                  span.read-more
+                    | leggi il programma
 
               h4
-                | Iscriviti
+                | Iscriviti subito!
               form.pure-form(action='https://www.youform.me/api/form/63961299-5f0a-4c0a-bff9-19f17ed728db', method='POST')
                 fieldset
                   input#email-sub(name='email-sub', type='email', placeholder='Il tuo indirizzo e-mail', required)
@@ -110,6 +128,13 @@ block content
 
           .spacer-60
 
+
+          .single-course(id='course-#2')
+            .padding
+              h2.grey
+                | Prossimi corsi in arrivo!
+              p.text-center.next
+                a(href='/#contacts') Iscriviti alla nostra newsletter per restare aggiornato!
 
 
 block scripts

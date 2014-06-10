@@ -12,7 +12,7 @@ block content
     .text
 
       .text-center
-
+        img.logo(src='static/img/mh-logo.png', alt='MeetHub')
         h4 Milano, autunno 2014
         .spacer-20
         h1.raleway MeetHub
@@ -75,7 +75,7 @@ block content
                 | <b>Brevi</b> per capirci qualcosa quando parlate con un sviluppatore
                 br
                 | <b>Avanzati</b> per affinare le tue conoscenze e metterle in pratica
-              b.link-scroll(data-where-to='mailchimp')
+              a(href='corsi.html')
                 | Iscriviti ai corsi!
 
         .pure-u-lg-1-3.pure-u-1.single-one
@@ -177,3 +177,13 @@ block content
       .spacer-50
 
 block scripts
+  script(type='text/javascript', src='static/js/vendor/isMobile.min.js')
+  script.
+    //  -- fix header 100% on desktops --
+    if (!isMobile.any && document.documentElement.clientWidth >= 1024) {
+      var _head = document.querySelector('header.homepage');
+      var _wh = document.body.clientHeight;
+
+      _head.style.height = _wh + 'px';
+    }
+    
