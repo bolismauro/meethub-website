@@ -30,33 +30,4 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-
-
-
-  //  read more link
-  function readMore (target) {
-    var _h = 0;
-    var _el = target.parentNode.previousSibling;
-
-    if (_el.classList.contains('show')) {
-      _h = 0;
-      _el.classList.remove('show');
-      target.textContent = 'Leggi il programma';
-    } else {
-      _h = _el.querySelector('.text').offsetHeight;
-      _el.classList.add('show');
-      target.textContent = 'Chiudi';
-    }
-
-    _el.style.height = _h + 'px';
-  }
-
-  document.querySelectorAll('.single-course span.read-more').forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      e.preventDefault();
-      readMore(e.target);
-      return false;
-    });
-  });
-
 });

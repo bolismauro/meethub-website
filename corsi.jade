@@ -6,18 +6,6 @@ block otherhead
 
 
 block content
-
-  header.inner-page
-    .container
-      .padding
-        .spacer-20
-        h1.raleway
-          a(href='/') 
-            img(src='static/img/mh-logo.png', alt='MeetHub')
-            span
-              | MeetHub
-        .spacer-100
-      
   #main.inner-page
     .container
 
@@ -30,18 +18,17 @@ block content
               span.line
             ul
               li.link-scroll(data-where-to='course-#1')
-                | App mobile: cosa sono e quando serve utilizzarne una
+                | App mobile: cosa sono e quando serve ralizzarne una
 
         .pure-u-lg-3-4.pure-u-1
           .single-course(id='course-#1')
             .padding
               h2
                 span.title.text-azure
-                  | App mobile: cosa sono e quando serve utilizzarne una
+                  | App mobile: cosa sono e quando serve ralizzarne una
                 span.infos 
                   | 3 lezioni
-                  span.text-azure  // 
-                  | &euro; 300,00
+                  span.text-azure  //
               p
                 i Hai un progetto Digital da far partire, ma non sei uno sviluppatore? <br />
                 | Il primo passo è conoscere gli strumenti per valutare le possibilità che la tecnologia offre e quali conviene utilizzare nei diversi contesti.
@@ -89,8 +76,7 @@ block content
 
                       ###COSTO###
 
-                      Il costo del corso è di € 300,00.  
-                      I partecipanti avranno diritto a sconti sui futuri corsi di MeetHub!
+                      Il costo del corso è di € 300,00 (+ IVA) da versare anticipamente tramite bonifico bancario o PayPal. In sede verrà emessa una fattura.
 
                       <div class="spacer-20"></div>
 
@@ -110,12 +96,6 @@ block content
                           | Alessandro Zocca
 
 
-
-
-                p.text-right 
-                  span.read-more
-                    | leggi il programma
-
               h4
                 | Iscriviti subito!
               form.pure-form(action='https://www.youform.me/api/form/63961299-5f0a-4c0a-bff9-19f17ed728db', method='POST')
@@ -132,9 +112,11 @@ block content
           .single-course(id='course-#2')
             .padding
               h2.grey
-                | Prossimi corsi in arrivo!
+                | Prossimi corsi!
               p.text-center.next
                 a(href='/#contacts') Iscriviti alla nostra newsletter per restare aggiornato!
 
+
+            .spacer-60
 
 block scripts

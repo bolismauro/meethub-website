@@ -14,7 +14,7 @@ _blue = #022C46
 _white = #fff
 
 //  - widths, heights or anything you want here -
-_width = 960px
+_width = 760px
 _padding = 10px
 _footer = 140px
 
@@ -89,17 +89,6 @@ body
   line-height 42px
   @extends .raleway
 
-  .body
-    min-height 100%
-    height auto!important
-    height 100%
-    margin 0 auto -(_footer) auto
-    position relative
-
-  .fix
-    height _footer
-    clearfix()
-
   .container
     width _width
     margin 0 auto
@@ -108,65 +97,25 @@ body
     padding 0 _padding
 
   header
-    &.homepage
-      position relative
-      //height 100%!important
-      background url('../img/header.jpg') center no-repeat
-      background-size cover
-      & > .overlay
-        width 100%
-        height 100%
-        z-index 1
-        position absolute
-        top 0
-        left 0
-        background url('../img/overlay2.png')
-      & > .text
-        position relative
-        z-index 2
-        padding-top 5%
-        padding-bottom 7%
-        h1,
-        h2,
-        h4
-          margin 0
-          color _white
-          text-shadow 0 1px 1px rgba(0,0,0,0.5)
-        h1
-          font-size 100px
-          font-weight 700
-          line-height 100%
-        h2
-          text-transform uppercase
-          letter-spacing 5px
-          font-size 18px
-          font-weight 600
-        h4
-          letter-spacing 5px
-          font-size 16px
+    h1
+      font-size 32px
+      font-weight 700
+      line-height 100%
+      a
+        color _notsoblack
+        text-decoration none
+        span,
+        img,
         i
-          font-size 40px
-          color _white
-          cursor pointer
-        img.logo
-          width 300px
-          height 300px
-
-    &.inner-page
-      h1
-        font-size 32px
-        font-weight 700
-        line-height 100%
-        a
-          color _notsoblack
-          text-decoration none
-          span,
-          img
-            display inline-block
-          img
-            width 64px
-            height 64px
-            vertical-align bottom
+          display inline-block
+          margin-right 10px
+        img
+          width 64px
+          height 64px
+          vertical-align bottom
+        i
+          font-weight 400
+          font-size 12px
 
   #main
     .intro
@@ -179,17 +128,17 @@ body
         font-size 18px
         line-height 26px
         @extends .raleway
+        position relative
         .circle
-          _cwh = 120px
+          _cwh = 60px
+          position absolute
+          top 0
+          left -(_cwh)
           width _cwh
-          height _cwh
-          border-radius (_cwh / 2)
-          margin 0 auto
-          line-height _cwh
           i
             display inline-block
             font-size (_cwh /2)
-            margin-top (_cwh / 4)
+            color rgba(_notsoblack, 0.5)
         h3
           color _azure
           font-weight 600
@@ -205,20 +154,10 @@ body
 
   #quote
     padding 100px 0
-    background url('../img/wall.jpg') center no-repeat fixed
-    background-size cover
     position relative
-    & > .overlay
-      position absolute
-      top 0
-      left 0
-      background url('../img/overlay2.png')
-      z-index 1
-      width 100%
-      height 100%
     & > .text
       position relative
-      color _white
+      color _notsoblack
       z-index 2
       cite
         display block
@@ -253,17 +192,23 @@ body
   .team
     .team-member
       margin-bottom 40px
-      _teamwh = 190px
+      _teamwh = 100px
+      & > .padding
+        position relative
+      .text
+        padding-left _teamwh
       .circle
         width _teamwh
         height _teamwh
         border-radius (_teamwh / 2)
         overflow hidden
         margin 0 auto
-        position relative
+        position absolute
+        top 0
+        left 0
         & > img
-          width 200px
-          height 200px
+          width _teamwh
+          height _teamwh
           z-index 1
         & > .hover-circle
           opacity 0
@@ -303,7 +248,7 @@ body
         margin-bottom 5px
         span
           border-bottom 1px solid _azure
-          padding 0 10px 4px 10px
+          padding-bottom 4px
       h5
         font-weight 300
         font-size 16px
@@ -312,14 +257,14 @@ body
         a
           display inline
           vertical-align middle
-          margin 0 10px
+          margin-right 20px
           color _azure
+          &:last-child
+            margin-right 0px
           i
             font-size 20px
 
   #contacts
-    background _azure
-    color _white
     form
       margin 0 auto
       p
@@ -337,11 +282,12 @@ body
         margin 0 auto
         width 65%
       input
-        border none
-        background #136F8C
+        border 2px solid rgba(_notsoblack, 0.2)
+        background _white
         box-shadow none
-        border-top-right-radius 0
-        border-bottom-right-radius 0
+        display block
+        margin-bottom 20px
+        text-align center
         &:valid
           color _white
         &:invalid
@@ -356,13 +302,13 @@ body
           color #ccc
       button
         color _white
-        background #115166
-        border none
-        border-top-right-radius 4px
-        border-bottom-right-radius 4px
-        padding .5em .6em
+        background _azure
+        padding .5em .7em
         vertical-align middle
-        display inline
+        border none
+        border-radius 4px
+        display inline-block
+        margin 0 auto
         i
           display inline-block
           margin-right 10px
@@ -458,9 +404,6 @@ body
           i
             color rgba(_notsoblack, 0.6)
           &.more
-            height 0
-            transition height 0.5s ease
-            overflow hidden
             .text
               @extends .raleway
               h4
@@ -503,33 +446,26 @@ body
                       & > img
                         width _wPic
                         height _wPic
-          span.read-more
-            cursor pointer
-            color _azure
-            text-transform uppercase
-            font-style italic
-            font-size 14px
         h4
           text-transform uppercase
 
   footer
-    background _notsoblack
-    color _white
+    background _white
+    color _notsoblack
     @extends .open-sans
     font-size 14px
     line-height 150%
     font-weight 400
-    height _footer
-    overflow hidden
-    z-index 10
-    position relative
+    & > .container
+      padding-top 10px
+      border-top 1px solid rgba(_notsoblack, 0.2)
     a
-      color _white
+      color _notsoblack
     .left
       a
         font-weight 700
         text-decoration none
-        border-bottom 1px dotted _white
+        border-bottom 1px dotted _notsoblack
       small
         display block
         font-size 12px
@@ -550,30 +486,12 @@ body
   _padding = 20px
 
   body
-    
-    .body
-      height 100%!important
-      height auto!important
 
     .container
       width _width
     
     .padding
       padding 0 _padding
-
-    header
-      &.homepage
-        height auto
-        & > .text
-          h1
-            font-size 60px
-          h2,
-          h4
-            font-size 14px
-            line-height 30px
-          img.logo
-            width 150px
-            height 150px
 
     #main
       .three
@@ -595,35 +513,23 @@ body
         font-size 55px
 
     #contacts
-      background _azure
-      color _white
       form
         @extends .text-center
         input
-          border-radius 4px
-          border-bottom-left-radius 0
-          border-bottom-right-radius 0
-          margin-bottom 0
           text-align center
           font-size 16px
         button
-          margin-top -10px
           color _white
-          background #115166
+          background _azure
           border none
           border-radius 4px
-          border-top-left-radius 0
-          border-top-right-radius 0
           font-size 16px
-        .form-inputs
-          margin 0 auto
-          width 85%
 
     footer
-      height auto!important
-      overflow visible
       .right
         margin-top 20px
+        .text-right
+          text-align left
         b
           display block
         .spacer-20

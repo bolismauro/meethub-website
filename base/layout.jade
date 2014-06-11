@@ -23,11 +23,20 @@ html(prefix='og: http://ogp.me/ns#')
       meta(property='og:description', content='Meethub è un luogo stimolante in cui accelerare se stessi e rimodellare ogni giorno la propria realtà')
 
   body
+    header
+      .container
+        .padding
+          .spacer-20
+          h1.raleway
+            a(href='/') 
+              img(src='static/img/mh-logo.png', alt='MeetHub')
+              span
+                | MeetHub
+              i Meet, Share, Build: Change.
+          .spacer-100
 
-    .body
-      block content
-      .fix
-
+    block content
+    
     footer
       .container
         .spacer-20
@@ -36,7 +45,7 @@ html(prefix='og: http://ogp.me/ns#')
           .pure-u-sm-3-4.pure-u-1.left
             .padding
               .text-left
-                | MeetHubTM &egrave; un marchio di 
+                | MeetHub&trade; &egrave; un marchio di 
                 a(href='http://www.plasticpanda.com', target='_blank') Plastic Panda
                 | , P.IVA / C.F 07926220968,
                 br
