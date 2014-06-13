@@ -153,8 +153,11 @@ body
           border-bottom 2px solid rgba(_azure, 60%)
 
   #quote
-    padding 100px 0
     position relative
+    .container
+      padding 100px 0
+      border-top 1px solid rgba(_notsoblack, 0.2)
+      border-bottom 1px solid rgba(_notsoblack, 0.2)
     & > .text
       position relative
       color _notsoblack
@@ -174,9 +177,10 @@ body
 
   .intro
   #team,
-  #contacts
+  #contacts,
+  .three
     h1
-      font-size 80px
+      font-size 30px
       line-height 100%
       margin 0
       @extends .raleway
@@ -185,10 +189,15 @@ body
       span
         border-bottom 1px solid rgba(_notsoblack, 50%)
   #contacts
+    .container
+      border-top 1px solid rgna(_notsoblack, 0.2)
     h1
       span
         border-bottom-color _white
 
+  #team
+    p
+      font-size 18px
   .team
     .team-member
       margin-bottom 40px
@@ -286,8 +295,9 @@ body
         background _white
         box-shadow none
         display block
-        margin-bottom 20px
+        margin 0 auto 20px auto
         text-align center
+        width 95%
         &:valid
           color _white
         &:invalid

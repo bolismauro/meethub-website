@@ -12,24 +12,27 @@ block content
 
       .intro
         .padding
-          //-h1
-            span
-              | cosa è
-            .spacer-40
           p
-            b Meethub  
+            b MeetHub  
             | &egrave; una 
             span.text-azure
               | startup 
-            | con l'obiettivo di aiutare i giovani laureandi e neo-laureati a capire cosa vogliono fare nella 
+            | che aiuta i giovani laureandi e neo-laureati a capire cosa vogliono fare nella 
             span.text-azure vita 
-            | ed acquisire le competenze 
-            span.text-azure pratiche/sociali 
-            | per trasformare passioni in occupazione o impresa
+            | e ad acquisire le 
+            span.text-azure competenze 
+            span.text-azure pratiche e sociali 
+            | per trasformare le proprie passioni in occupazione o impresa
 
       .spacer-100
 
       .three
+        .padding
+
+          h1
+            span
+              | cosa facciamo
+            .spacer-80
 
         .single-one
           .padding  
@@ -38,12 +41,12 @@ block content
             h3
               | Lavoro di squadra
             p
-              | Dimostra le tue capacità e proponi soluzioni <b>innovative</b> alle nostre aziende partner
+              | Dimostra le tue capacità! Proponi e sviluppa <b>soluzioni digitali innovative</b> per le aziende partner
               //- | Mettiti in gioco risolvendo in modo <b>innovativo</b> i problemi delle nostre aziende partner
               br
               //- span.text-azure #appyourself
             b.link-scroll(data-where-to='mailchimp')
-              | Candidati!
+              | Scopri di più e candidati!
 
         .spacer-100
 
@@ -53,16 +56,28 @@ block content
               i.fa.fa-code
             h3
               | Formazione digitale
-            p
-              //-  | Un approccio formativo tutto originale: impara facendo e 
-              | Sei laureando in economia, in lingue, in marketing? 
-              | Vorresti capire qualcosa quando parla di <b>app</b>, <b>siti web</b> e <b>social media marketing</b>?
-              | Incomincia dalle basi, insieme a noi
-              br
-              br  
-              | Sei laureando o neo-laureato in informatica? Approfondisci e metti in <b>pratica</b> le tue conoscenze di <b>design</b> e <b>programmazione</b>!
-            a(href='corsi.html')
-              | Iscriviti ai corsi!
+
+            .pure-g
+              .pure-u-1-2
+                .padding
+                  p
+                    b Corsi brevi
+                    br
+                    | Sei laureando in economia, in lingue, in geologia o in lettere? Vorresti capire qualcosa quando parla di <b>app</b>, <b>siti web</b> e <b>social media marketing</b>?
+                  
+                  p
+                    a(href='corsi.html')
+                      | Iscriviti ai corsi!
+
+              .pure-u-1-2
+                .padding
+                  p
+                    b Corsi avanzati
+                    br
+                    | Sei laureando o neo-laureato in informatica? Approfondisci e metti in <b>pratica</b> le tue conoscenze di <b>design</b> e <b>programmazione</b>!
+                  p
+                    a(href='corsi.html')
+                      | Iscriviti ai corsi!
 
         .spacer-100
 
@@ -73,27 +88,27 @@ block content
             h3
               | Startup caf&egrave;
             p
-                    | Un <b>luogo</b> dove ogni persona, studente o laureato possa recarsi e possa avere accesso <b>gratuitamente</b> a tutto ciò che è indispensabile a dare vita alle proprie <b>idee</b>, condividendo <b>competenze</b> e <b>passioni comuni</b>
-              //-   | Il punto di riferimento per chi ama la <b>tecnologia</b>, la <b>condivisione</b> e bere litri di <b>caffè</b>!
-              //-   | Il punto di riferimento per persone che amano <b>incontrarsi</b>, <b>condividere</b> idee, <b>scambiare</b> competenze, e bere litri di caffè!
+              | Stiamo costruendo un <b>luogo</b> dove ogni persona, studente o laureato possa recarsi e avere accesso <b>gratuitamente</b> a tutto ciò che è indispensabile per dare vita alle proprie <b>idee</b> e condividere le proprie <b>conoscenze</b>
+
             b.link-scroll(data-where-to='mailchimp')
-              | Resta in contatto!
+              | Restiamo in contatto!
 
       .spacer-100
 
 
 
-    #quote
-      .text
-        .container
-          .padding.text-center
-            cite 
-              span &laquo; 
-              | There's only one thing that all the successful companies in the world have in common: <b>none was started by one person</b>. 
-              span &raquo;
-            .spacer-30
-            p.author.text-right
-              | Ernesto Sirolli
+    //-
+      #quote
+        .text
+          .container
+            .padding.text-center
+              cite 
+                span &laquo; 
+                | There's only one thing that all the successful companies in the world have in common: <b>none was started by one person</b>. 
+                span &raquo;
+              .spacer-30
+              p.author.text-right
+                | Ernesto Sirolli
 
 
     #team
@@ -102,17 +117,17 @@ block content
         .spacer-50
 
         .padding
-          //-h1.text-center
+          h1
             span
-              | Team
-          p.text-center
+              | il nostro team
+          p
             | Siamo sette ragazzi che credono fortemente nella <b>condivisione</b> e nel <b>gioco di squadra</b>
 
         .spacer-50
 
         .team.pure-g
 
-          - var team = [{'nome': 'Andrea Speziale', 'job': 'Communication & Guru', 'pic': 'andrea', 'fb': 'http://fb.com/andreafspeziale', 'tw': 'http://twitter.com/andreafspeziale', 'li': 'http://linkedin.com/in/andreafspeziale'},{'nome': 'Mauro Bolis', 'job': 'Training & Deadline Master', 'pic': 'mauro', 'fb': 'http://fb.com/bolismauro', 'tw': 'http://twitter.com/maurobolis', 'li': 'http://linkedin.com/profile/view?id=156968743'},{'nome': 'Simone Lusenti', 'job': 'CEO, Account & Head of Technology', 'pic': 'simone', 'fb': 'http://fb.com/slusenti', 'tw': 'http://twitter.com/Lanzone31', 'li': 'http://linkedin.com/profile/view?id=39084654'},{'nome': 'Marta Bisisi', 'job': 'Financial', 'pic': 'marta', 'fb': 'http://fb.com/marta.bisisi', 'tw': 'http://twitter.com/MartaBisisi', 'li': 'http://linkedin.com/profile/view?id=308388367'},{'nome': 'Salvatore Scarfò', 'job': 'Marketing & Financial', 'pic': 'salvo', 'fb': 'http://fb.com/scarfo.s', 'tw': 'http://twitter.com/Scarfo_S', 'li': 'http://linkedin.com/in/salvatorescarfo'},{'nome': 'Emanuele Brivio', 'job': 'Head of Design and Interaction', 'pic': 'emanuele', 'fb': 'http://fb.com/emanbrivio', 'tw': 'http://twitter.com/emanbrivio', 'li': 'http://linkedin.com/in/emanuelebrivio'},{'nome': 'Alessio Zappa', 'job': 'Senior Media Designer', 'pic': 'alessio', 'fb': 'http://fb.com', 'tw': 'http://twitter.com', 'li': 'http://linkedin.com/in/alessioedoardozappa'}];
+          - var team = [{'nome': 'Andrea Speziale', 'job': 'Head of Communication', 'pic': 'andrea', 'fb': 'http://fb.com/andreafspeziale', 'tw': 'http://twitter.com/andreafspeziale', 'li': 'http://linkedin.com/in/andreafspeziale'},{'nome': 'Mauro Bolis', 'job': 'Head of Training', 'pic': 'mauro', 'fb': 'http://fb.com/bolismauro', 'tw': 'http://twitter.com/maurobolis', 'li': 'http://linkedin.com/profile/view?id=156968743'},{'nome': 'Simone Lusenti', 'job': 'Account', 'pic': 'simone', 'fb': 'http://fb.com/slusenti', 'tw': 'http://twitter.com/Lanzone31', 'li': 'http://linkedin.com/profile/view?id=39084654'},{'nome': 'Marta Bisisi', 'job': 'Financial', 'pic': 'marta', 'fb': 'http://fb.com/marta.bisisi', 'tw': 'http://twitter.com/MartaBisisi', 'li': 'http://linkedin.com/profile/view?id=308388367'},{'nome': 'Salvatore Scarfò', 'job': 'Marketing & Financial', 'pic': 'salvo', 'fb': 'http://fb.com/scarfo.s', 'tw': 'http://twitter.com/Scarfo_S', 'li': 'http://linkedin.com/in/salvatorescarfo'},{'nome': 'Emanuele Brivio', 'job': 'Head of Design and Interaction', 'pic': 'emanuele', 'fb': 'http://fb.com/emanbrivio', 'tw': 'http://twitter.com/emanbrivio', 'li': 'http://linkedin.com/in/emanuelebrivio'},{'nome': 'Alessio Zappa', 'job': 'Senior Media Designer', 'pic': 'alessio', 'fb': 'http://fb.com', 'tw': 'http://twitter.com', 'li': 'http://linkedin.com/in/alessioedoardozappa'}];
 
           - for m, k in team
 
@@ -141,21 +156,21 @@ block content
       .spacer-50
 
       .padding
+
+        hr
+
         //-h1.text-center
           span
             | keep in touch
         p
-          | Crediamo che la vera <b> innovazione </b> venga fatta dalle <b> persone </b>, immaginatevi un luogo dove rimodellare ogni giorno la propria <b> realtà </b>, <b> condividere </b> il sapere ed <b> imparare </b> dagli altri
-        
-        p
-          | Un <b> luogo </b> che diventi il punto di riferimento e formi gli <b>innovatori </b> del domani <b> oggi </b>
+          | Crediamo che la vera <b>innovazione</b> sia fatta dalle <b>persone</b>, immaginate un luogo dove rimodellare ogni giorno la vostra <b>realtà</b>, dove <b>condividere</b> il sapere e <b>imparare</b> dagli altri!
 
         form#mailchimp.validate.pure-form.validate(action='http://meethub.us8.list-manage2.com/subscribe/post?u=979a6993e64ffa1ec057b0823&amp;id=a116ce73c0', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate)
           br
           p
             | Figo, vero?! Parliamone davanti a un caff&egrave;!
-          .pure-g.form-inputs
-            input#mce-EMAIL.pure-input-1(type='email', value='', name='EMAIL', placeholder='Inserisci il tuo indirizzo email', required)
+          .form-inputs
+            input#mce-EMAIL(type='email', value='', name='EMAIL', placeholder='Inserisci il tuo indirizzo email', required)
             button(type='submit')
                 i.fa.fa-check
                 span Resta aggiornato
