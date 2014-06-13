@@ -1,0 +1,43 @@
+extends base/layout
+
+block otherhead
+
+block content
+  #main.inner-page
+    .container
+        .pure-u-lg-1.pure-u-1
+            
+          h2
+            span.title.text-azure
+              | Grazie!
+          p Sarai ricontattato quanto prima da un nostro responsabile per completare la tua richiesta.
+          
+          p
+            small
+              em Il team di MeetHub
+            
+
+          p &nbsp;
+          p &nbsp;
+          p &nbsp;
+          p &nbsp;
+
+    // Facebook Conversion Code for contatti
+
+    script.
+      (function() {
+        var _fbq = window._fbq || (window._fbq = []);
+        if (!_fbq.loaded) {
+          var fbds = document.createElement('script');
+          fbds.async = true;
+          fbds.src = '//connect.facebook.net/en_US/fbds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(fbds, s);
+          _fbq.loaded = true;
+        }
+      })();
+      window._fbq = window._fbq || [];
+      window._fbq.push(['track', '6016533959185', {'value':'0.01','currency':'EUR'}]);
+
+
+block script
