@@ -144,13 +144,19 @@ body
           font-weight 600
           font-size 24px
           text-transform uppercase
-        b.link-scroll,
+        p.link-scroll,
         a
           text-decoration none
           color _azure
           cursor pointer
           font-weight 600
           border-bottom 2px solid rgba(_azure, 60%)
+          display inline
+
+      .cbase
+        padding-right _padding
+      .cavanzati
+        padding-left _padding
 
   #quote
     position relative
@@ -537,6 +543,10 @@ body
           margin-bottom 30px
           &:last-child
             margin-bottom 0
+        .cbase
+          padding-right 0px
+        .cavanzati
+          padding-left 0px
       &.inner-page
         .sidebar
           margin-bottom 100px
