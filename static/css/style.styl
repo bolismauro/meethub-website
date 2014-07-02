@@ -374,8 +374,13 @@ body
             padding 0
             @extends .raleway
             color _azure
-            margin-bottom 20px
-
+            margin-bottom 40px
+            clearfix()
+            b
+              color _azure
+              text-transform uppercase
+              border-bottom 2px solid rgba(_azure, 0.5)
+              float left
         p
           &.next
             @extends .raleway
@@ -412,6 +417,10 @@ body
               font-weight 400
               float right
               line-height 24px
+              b
+                color _azure
+                text-transform uppercase
+                border-bottom 2px solid rgba(_azure, 0.5)
 
         &.other-courses
           ul
