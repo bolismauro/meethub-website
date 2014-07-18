@@ -1,0 +1,159 @@
+extends base/layout
+
+
+block otherhead
+
+
+
+block content
+  #main.inner-page
+    .container
+
+      .pure-g
+        .pure-u-lg-1-4.pure-u-1.sidebar
+          .padding
+            h5
+              span.text
+                | i nostri corsi
+              span.line
+            ul
+              li.link-scroll(data-where-to='course-#1')
+                | App mobile: cosa sono, come funziona e quando serve realizzarne una
+                br
+                small(style='color:grey;') 1-8-15 Luglio 2014
+                br
+                b Partito!
+                
+              li
+                | Introduzione al Social Media Marketing
+                br
+                small(style='color:grey;') prossimamente
+                
+              li
+                | Introduzione allo sviluppo Web (frontend)
+                br
+                small(style='color:grey;') prossimamente
+                
+              li
+                | Arduino basics
+                br
+                small(style='color:grey;') prossimamente
+                
+            p.next.text-center
+              br
+              a(href='/#contacts') Iscriviti alla nostra newsletter per restare aggiornato!
+
+        .pure-u-lg-3-4.pure-u-1
+          .single-course(id='course-#1')
+            .padding
+              h2
+                span.title.text-azure
+                  | App mobile
+                  br
+                  small cosa sono, come funziona e quando serve realizzarne una
+                span.infos 
+                  br
+                  b Partito!
+                  | &nbsp; &nbsp;
+                  | 3 lezioni
+                  span.text-azure  // 1-8-15 luglio 2014
+              
+              p.
+                Sentiamo spesso parlare di App per iPhone e Android, di Siti Web o di Applicazioni Web.
+                Vorresti capirci qualcosa di più?
+              
+              p.
+                Hai un'idea per una App e non sai da che parte iniziare a progettarla?
+              
+              p.
+                Oppure sei semplicemente curioso di conoscere cosa c'è dietro a Whatsapp o al tuo gioco preferito?
+                
+              p
+                strong Questo corso fa per te!
+              
+              p
+                small
+                  em.
+                    Il corso non è tecnico, non insegna a sviluppare un'applicazione ma fornisce gli strumenti e le competenze
+                    necessarie a comprenderne il funzionamento e intraprendere i primi passi per la progettazione. È da intendersi come punto di approccio al mondo digitale e
+                    adatto a giovani di qualsiasi background formativo.
+              
+                
+              
+              .more
+                .text
+                  .spacer-20
+                  :markdown
+
+                    ###PROGRAMMA DEL CORSO###
+
+                    ####Introduzione####
+                    - Obiettivi del corso
+                    - I numeri del mercato
+
+                    ####Case histories####
+                    - Storia e prime applicazioni sviluppate
+                    - Casi di successo
+
+                    ####Cos'è una App?####
+                    - Caratteristiche principali e struttura di una App
+                    - Strategie e figure professionali coinvolte nello sviluppo
+
+                    ####Approfondimenti####
+                    - Come funzionano?
+                    - Quali tipologie di App esistono? Quando si usano app Web e quando native?
+                    - Piattaforme principali (Android/iOS/WP), differenze e da dove conviene iniziare
+
+                    <div class="spacer-20"></div>
+
+                    ###LEZIONI###
+
+                    Il corso sarà suddiviso in tre lezioni da due ore ciascuna:
+
+                    - **Martedì 1 Luglio 2014** ore **18.30** - 20.30
+                    - **Martedì 8 Luglio 2014** ore **18.30** - 20.30
+                    - **Martedì 15 Luglio 2014** ore **18.30** - 20.30
+
+                    Le lezioni si svolgeranno in una location a <b>Milano</b> centro, a due passi dal Duomo.<br>
+                    <br>
+                    Il format del corso sarà del tutto innovativo e interattivo e alla fine di ogni lezione ci sarà un aperitivo con tutto il nostro team!
+
+                    <div class="spacer-20"></div>
+
+                    ###COSTO###
+
+                    Il costo del corso è di **€300,00** + IVA da versare anticipamente tramite bonifico bancario, via PayPal o in contanti.<br> 
+                    Contestualmente al pagamento sarà emessa fattura.
+
+                    <div class="spacer-20"></div>
+
+                  h3
+                    | TRAINERS
+                  .trainer-list
+                    ul
+                      li
+                        span.pic
+                          img(src='static/img/team/mauro.jpg')
+                        | Mauro Bolis
+                      li
+                        span.pic
+                          img(src='static/img/team/simone.jpg')
+                        | Simone Lusenti
+                    
+                    p
+                      a(href='/#team') Chi siamo?
+
+                  .spacer-20
+
+                  h3.alt
+                    | ISCRIVITI SUBITO!
+                  form.pure-form(action='https://www.youform.me/api/form/81c5eceb-eaea-465f-8cac-b8c86949dc67', method='POST')
+                    fieldset
+                      input#email-sub(name='email-sub', type='email', placeholder='Il tuo indirizzo e-mail', required)
+                      | &nbsp;
+                      input#course(name='course', type='hidden', value='App mobile: cosa sono e quando serve utilizzarne una')
+                      button.pure-button.pure-button-primary(type='submit')
+                        span Invia
+
+          
+block script
